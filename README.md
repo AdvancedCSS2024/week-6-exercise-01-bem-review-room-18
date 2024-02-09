@@ -278,3 +278,5 @@ The ".card_content > p {}" should be beneath the comment that specifies card sel
 
 ## Example 27
 In what scenarios is it advantageous to use a class name that represents the animal, and in what scenarios would it be preferable to use a generic name like 'product_01' or 'product_02'?
+
+If you have a wide range of different products (and those products aren't all about animals) you probably shouldn't name each and every one of them with a different animal name. If the product you're selling handles specifically about animals, then in that context it would be acceptable.

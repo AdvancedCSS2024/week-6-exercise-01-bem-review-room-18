@@ -53,11 +53,11 @@ In addition to the above BEM exercise, in your group, practice Git collaboration
 > this solution can be correct in case class `card_header` consist of some styles that cannot be inherit and needed to be specified and are shared between all headers
 
 ## Example 2
-    .card--dog {
+    .card__dog {
         background-color: pink;
     }
     
-    .card--cat {
+    .card__cat {
         background-color: yellow;
     }
 
@@ -70,7 +70,7 @@ In addition to the above BEM exercise, in your group, practice Git collaboration
       }
 
 ## Example 4
-    <p class="card__description__text">
+    <p class="card__description--text">
         Lorem ipsum dolor...
     </p>
 
@@ -92,7 +92,7 @@ In addition to the above BEM exercise, in your group, practice Git collaboration
     </section>
 
 ## Example 6
-    .button--styled--disabled{
+    .button__styled--disabled{
         background-color: orange;
     }
 
@@ -102,7 +102,7 @@ In addition to the above BEM exercise, in your group, practice Git collaboration
     </article>
 
 ## Example 8
-    <article class="card card--dog card--dog--type1">
+    <article class="card--dog--type1">
       ...
     </article>
 
@@ -123,15 +123,15 @@ In addition to the above BEM exercise, in your group, practice Git collaboration
     }
 
 ## Example 10
-    .card--dog--type1 header{
+    .card__header--dog--type1{
         background-color: green;
     }
 
-    .card--dog--type2 header{
+    .card__header--dog--type2{
         background-color: purple;
     }
 
-    .card--dog--type3 header{
+    .card__header--dog--type3{
         background-color: orange;
     }
 
@@ -144,9 +144,14 @@ In addition to the above BEM exercise, in your group, practice Git collaboration
 
     
 ## Example 12
-    <section class="dog--flex">
+    <section class="card__section--dog">
         ...
     </section>
+
+// Add this to css instead //
+    card__section--dog {
+        show: flex;
+    }
 
 ## Example 13
     <footer class="card__options">
@@ -156,9 +161,9 @@ In addition to the above BEM exercise, in your group, practice Git collaboration
     </footer>
 
 ## Example 14
-    <header class="">
-        <h2 class="card__dog--poster">Dog Poster</h2>
-        <h3 class="">Dog poster - 50nok</h3>
+    <header class="card__header--dog">
+        <h2 class="card__header--subtitle">Dog Poster</h2>
+        <h3 class="card__header--subtitle">Dog poster - 50nok</h3>
     </header>
 
 ## Example 15
@@ -168,7 +173,7 @@ In addition to the above BEM exercise, in your group, practice Git collaboration
     </header>
 
 ## Example 16
-    <section class="catbox">
+    <section class="card__section--cat">
         ...
     </section>
 
@@ -179,9 +184,9 @@ In addition to the above BEM exercise, in your group, practice Git collaboration
     </button>
 
 ## Example 18
-    <header class="main_header">
+    <header class="main__header">
         <h1>BEM</h1>
-        <button class="styled disabled wishlist">
+        <button class="button__styled--disabled--wishlist">
             <span>🚀</span>
             <span>Wish list</span>
         </button>
@@ -211,6 +216,9 @@ In addition to the above BEM exercise, in your group, practice Git collaboration
         ...
     }
 
+    Because to keep the code clean and not "DRY" you should only use id when there is only 
+    one thing that has that same style, i there are multiple then use classes
+
 ## Example 21
     <main class="main_flex-container">
         ...
@@ -220,9 +228,11 @@ In addition to the above BEM exercise, in your group, practice Git collaboration
 > [!TIP]
 > BEM stands for block__element--modifier, is "cat" and "dog" an element? 
 
-    <section class="card-section__cats">
+    <section class="card__section--cats">
         ...
     </section>
+
+    Cat would be a modifier.
 
 ## Example 23
 > [!TIP]
@@ -240,6 +250,9 @@ In addition to the above BEM exercise, in your group, practice Git collaboration
         flex-direction: row-reverse;
     }
 
+    Without more context this coulb be right if there is more indivual styles for div2, 
+    if not it would be resonable to name the divs just div instead of having 2 
+
 ## Example 25
 ![image](https://github.com/aniWeyn/advancedcss-bemmistakes/assets/23743322/57049158-a239-4853-aa76-c2cf63e443fe)
 
@@ -249,18 +262,21 @@ In addition to the above BEM exercise, in your group, practice Git collaboration
       ...
     }
 
-    header>button {
+    header > button {
       border: none;
       ...
     }
 
-    header>button:hover {
+    header > button:hover {
        background-color: hsl(180, 25%, 73%);
     }
 
-    header>button:active {
+    header > button:active {
       background-color: hsl(180, 29%, 50%);
     }
 
+    Maybe add spaces unless i am unsure
+
 ## Example 27
 In what scenarios is it advantageous to use a class name that represents the animal, and in what scenarios would it be preferable to use a generic name like 'product_01' or 'product_02'?
+

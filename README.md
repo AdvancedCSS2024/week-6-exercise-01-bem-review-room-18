@@ -62,7 +62,7 @@ In addition to the above BEM exercise, in your group, practice Git collaboration
     }
 
 ## Example 3
-    .Newcard {
+    .new-card {
       border: solid 1px rgb(255, 242, 0);
       border-width: 2rem;
       max-width: 260px;
@@ -82,10 +82,10 @@ In addition to the above BEM exercise, in your group, practice Git collaboration
 > There are more mistakes to fix here :)
 
     <section class="card">
-        <article class="card article__dog">
-            <aside class="article__dog aside">
-                <figure class="article__dog figure">
-                    <img src="..." alt="Dummy Image" class="" />
+        <article class="card__article--dog">
+            <aside class="article__do--aside">
+                <figure class="article__dog--figure">
+                    <img src="..." alt="dummy-image" class="image" />
                 </figure>
              </aside>
          </article>
@@ -97,7 +97,7 @@ In addition to the above BEM exercise, in your group, practice Git collaboration
     }
 
 ## Example 7
-    <article class="card cat--card">
+    <article class="card__cat">
       ...
     </article>
 
@@ -108,18 +108,15 @@ In addition to the above BEM exercise, in your group, practice Git collaboration
 
 ## Example 9
     .card {
-        border: solid 1px #000;
-        max-width: 360px;
-        padding: 20px;
-    }
-  
-    .card {
         background-color: white;
         margin-bottom: 20px;
         padding: 15px;
         display: block;
         align-items: center;
         justify-content: center;
+        border: solid 1px #000;
+        max-width: 360px;
+        padding: 20px;
     }
 
 ## Example 10
@@ -136,7 +133,7 @@ In addition to the above BEM exercise, in your group, practice Git collaboration
     }
 
 ## Example 11
-    <main class="main__flex-wrap">
+    <main>
         ...
     </main>
 > [!TIP]
@@ -155,7 +152,7 @@ In addition to the above BEM exercise, in your group, practice Git collaboration
 
 ## Example 13
     <footer class="card__options">
-      <div class="card__options-buttons">
+      <div class="card__options--buttons">
        ...
       </div>
     </footer>
@@ -168,8 +165,8 @@ In addition to the above BEM exercise, in your group, practice Git collaboration
 
 ## Example 15
     <header class="card__header">
-        <h2 class="card__title--cat">NEW! Cat Poster</h2>
-        <h3 class="card__subtitle">Cat poster - 50nok</h3>
+        <h2 class="card__cat--title">NEW! Cat Poster</h2>
+        <h3 class="card__cat--subtitle">Cat poster - 50nok</h3>
     </header>
 
 ## Example 16
@@ -178,9 +175,9 @@ In addition to the above BEM exercise, in your group, practice Git collaboration
     </section>
 
 ## Example 17
-    <button class="card_basked_button styled disabled">
-        <span class="card_basket_button_icon">&#128722;</span>
-        <span class="card_basket_button_text">Basket</span>
+    <button class="card__basked-button--styled-disabled">
+        <span class="card__basket-button--icon">&#128722;</span>
+        <span class="card__basket-button--text">Basket</span>
     </button>
 
 ## Example 18
@@ -203,7 +200,7 @@ In addition to the above BEM exercise, in your group, practice Git collaboration
 > Why it is not a good idea to style cards based on `nth-of-type(even)` in context of shopping cards?
 > In which context it will be a good idea?
 
-    .card:nth-of-type(even) .card_basked_button {
+    .card, .card__basked-button {
         ...
     }
 
@@ -220,7 +217,7 @@ In addition to the above BEM exercise, in your group, practice Git collaboration
     one thing that has that same style, i there are multiple then use classes
 
 ## Example 21
-    <main class="main_flex-container">
+    <main>
         ...
     </main>
 
@@ -239,7 +236,7 @@ In addition to the above BEM exercise, in your group, practice Git collaboration
 > Let's assume that in some case it make sense to call a section "cat" or "dog", the section "cat" will consist of multiple cards of cats, and the section "dog" will consist of multiple cards of dogs. Let's not focuse here on BEM. Nevertheless, how could you improve on class naming?
 > 
 
-    <section class="cat">
+    <section class="card__cat">
         ...
     </section>
 
@@ -255,6 +252,8 @@ In addition to the above BEM exercise, in your group, practice Git collaboration
 
 ## Example 25
 ![image](https://github.com/aniWeyn/advancedcss-bemmistakes/assets/23743322/57049158-a239-4853-aa76-c2cf63e443fe)
+
+The ".card_content > p {}" should be beneath the comment that specifies card selectors.
 
 ## Example 26
     header {
@@ -279,4 +278,3 @@ In addition to the above BEM exercise, in your group, practice Git collaboration
 
 ## Example 27
 In what scenarios is it advantageous to use a class name that represents the animal, and in what scenarios would it be preferable to use a generic name like 'product_01' or 'product_02'?
-
